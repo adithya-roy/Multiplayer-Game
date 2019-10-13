@@ -2,10 +2,11 @@
     <head>
         <meta charset="utf-8">
         <link rel="stylesheet" href="style.css"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title>Snakes</title>
 
     </head>
-    <body>
+    <body onload="startMovement()">
         <div class="content">
             <div class="main">
 
@@ -29,7 +30,16 @@
             
             <div>
                 <h3>CONTROLS</h3>
-                <p>Move the snake using up,down,left or right OR W,A,S,D</p>
+                <p>Move the snake using up,down,left or right </p>
+                <script src="cww2.js"></script>
+
+                <div style="text-align:center;width:480px;">
+  <button onclick="left()">LEFT</button>
+  <button onclick="right()">RIGHT</button><br><br>
+  <button onclick="up()">UP</button><br><br>
+  <button onclick="down()">DOWN</button>
+ 
+</div>
             </div>
 
             <!-- <div class="content" id="highscore">
