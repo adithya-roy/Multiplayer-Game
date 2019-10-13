@@ -1,22 +1,3 @@
-// function startMovement() {
-//     snake = new component(30, 25, "green", 10, 120);
-//     playground.start();
-// }
-
-// var playground = {
-//     canvas : document.getElementById("MainCanvas"),
-//     start : function() {
-//         this.canvas.width = 400;
-//         this.canvas.height = 400;
-//         this.context = this.canvas.getContext("2d");
-//         document.body.insertBefore(this.canvas, document.body.childNodes[0]);
-//         this.interval = setInterval(updatePG, 20);
-//     },
-//     clear : function() {
-//         this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
-//     }
-// }
-
 window.onload=function() {
     canv=document.getElementById("MainCanvas");
     ctx=canv.getContext("2d");
@@ -143,40 +124,6 @@ function upmove() {
     x_Speed=0.5;y_Speed=0;
   }
 
-
-
-// function component(width, height, color, x, y) {
-//     this.width = width;
-//     this.height = height;
-//     this.speedX = 0;
-//     this.speedY = 0;
-//     this.x = x;
-//     this.y = y;    
-//     this.update = function() {
-//         cnt = playground.context;
-//         cnt.fillStyle = color;
-//         cnt.fillRect(this.x, this.y, this.width, this.height);
-//     }
-//     this.newPos = function() {
-//         this.x += this.speedX;
-//         this.y += this.speedY;        
-//     }    
-// }
-
-// function updatePG() {
-//     playground.clear();
-//     snake.newPos();    
-//     snake.update();
-// }
-
 function End() {
     alert("Game Over !!");
   }
-
-// function buildWall(context,gridX,gridY,width,height) {
-//     console.log("BuildWall");
-//     width = width*2-1;
-//     height = height*2-1;
-//     context.fillRect(pacman.radius/2+gridX*2*pacman.radius,pacman.radius/2+gridY*2*pacman.radius, width*pacman.radius, height*pacman.radius);
-// }
-
