@@ -93,3 +93,9 @@ function keyPush(evt) {
     }
     
 }
+
+
+
+function End() {
+    alert("Game Over !!");
+  }
