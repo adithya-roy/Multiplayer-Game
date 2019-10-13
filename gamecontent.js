@@ -25,14 +25,17 @@ window.onload=function() {
     document.getElementById("right").addEventListener("click",rightmove);
     document.getElementById("up").addEventListener("click",upmove);
     document.getElementById("down").addEventListener("click",downmove);
+    document.getElementById("score").innerHTML = Score;
     setInterval(game,1000/15);
 }
+
 Snake_Pos_x=Snake_Pos_y=10;
 grid_size=tiles_count=20;
 foodX=foodY=15;
 x_Speed=y_Speed=0;
 trail=[];
 tail = 1;
+Score= 0;
 function game() {
    
     Snake_Pos_x+=x_Speed;
@@ -65,8 +68,11 @@ function game() {
     }
  
     if(foodX==Snake_Pos_x && foodY==Snake_Pos_y) {
+        Score += 1;
         foodX=Math.floor(Math.random()*tiles_count);
         foodY=Math.floor(Math.random()*tiles_count);
+        document.getElementById("score").innerHTML = Score;
+
     }
     ctx.fillStyle="red";
     ctx.fillRect(foodX*grid_size,foodY*grid_size,grid_size-2,grid_size-2);
