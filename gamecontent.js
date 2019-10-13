@@ -20,12 +20,14 @@
 window.onload=function() {
     canv=document.getElementById("MainCanvas");
     ctx=canv.getContext("2d");
+    name = prompt("Please enter your name ");
     document.addEventListener("keydown",keyPush);
     document.getElementById("left").addEventListener("click",leftmove);
     document.getElementById("right").addEventListener("click",rightmove);
     document.getElementById("up").addEventListener("click",upmove);
     document.getElementById("down").addEventListener("click",downmove);
     document.getElementById("score").innerHTML = Score;
+    document.getElementById("playername").innerHTML = name;
     setInterval(game,1000/15);
 }
 
@@ -36,6 +38,7 @@ x_Speed=y_Speed=0;
 trail=[];
 tail = 1;
 Score= 0;
+name= "Unkown";
 function game() {
    
     Snake_Pos_x+=x_Speed;
