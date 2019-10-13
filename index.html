@@ -16,30 +16,21 @@
                 </noscript>
 
                 <div id="canvas-main">
-                    <div id="canvas-overlay-main">
-                        <div id="canvas-overlay-container">
+                    <div id="canvas-overlfoodY-main">
+                        <div id="canvas-overlfoodY-container">
                             <div id="gamename"></div>
                             <div id="start"></div>
                         </div>
                     </div>
                 </div>
-                <canvas id="MainCanvas" width="540" height="390"  style="border:2px solid red;  margin-left:400px; margin-top: 100px;">
+                <canvas id="MainCanvas" width="400" height="400"  style="border:2px solid red;  margin-left:400px; margin-top: 100px;">
                 <p>Canvas not supported</p>
                 </canvas>
             </div>
             
             <div>
                 <h3>CONTROLS</h3>
-                <p>Move the snake using up,down,left or right </p>
-                <script src="cww2.js"></script>
 
-                <div style="text-align:center;width:480px;">
-  <button onclick="left()">LEFT</button>
-  <button onclick="right()">RIGHT</button><br><br>
-  <button onclick="up()">UP</button><br><br>
-  <button onclick="down()">DOWN</button>
- 
-</div>
             </div>
 
             <!-- <div class="content" id="highscore">
@@ -50,7 +41,6 @@
                     <h1>Highscore</h1>
                     <p></p>
                     <ol id="highscore-list">
-
                     </ol>
                     <p></p>
                     
@@ -58,21 +48,7 @@
 
             </div>
         </div>
-        <script>
-            var c = document.getElementById("MainCanvas");
-            var ctx = c.getContext("2d");
-            ctx.strokeStyle = "#FF0000";
-            ctx.moveTo(250, 0);
-            ctx.lineTo(250, 50);
-            ctx.moveTo(0, 250);
-            ctx.lineTo(50, 250);  
-            ctx.moveTo(100, 350);
-            ctx.lineTo(300, 350);    
-            ctx.moveTo(400, 150);
-            ctx.lineTo(200,150);                
-            ctx.stroke();
-
-        </script>
+        <script src="gamecontent.js">        </script>
     </body>
 
 </html>
