@@ -76,3 +76,33 @@ body {
      left: auto;
 }
 
+.controls-right .controlButton { position: relative; right: -65%; }
+
+.controls { text-align: center; margin-top: 15px;}
+
+.controlButton {
+	display: inline-block;
+	width: 90px;
+	height: 90px;
+	margin: 5px;
+	background: none repeat scroll 0% 0% #C80A0A;
+	line-height: 70px;
+	border-radius: 50%;
+	font-weight: bold;
+	font-size: 60px;
+	cursor: pointer;
+}
+
+.controlButton:hover, .controlButton:active {
+	background: #c00202;
+}
+
+.controlButton {
+    width: 60px;
+    height: 60px;
+    line-height: 40px;
+    font-size: 40px;
+}
+.controls-right .controlButton { right: -55%; }
+
+#game-buttons { display: none; }
