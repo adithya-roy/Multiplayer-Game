@@ -9,7 +9,7 @@ window.onload=function() {
     document.getElementById("down").addEventListener("click",downmove);
     document.getElementById("score").innerHTML = Score;
     document.getElementById("playername").innerHTML = name;
-    setInterval(game,1000/15);
+   Game= setInterval(game,1000/15);
 }
 
 Snake_Pos_x=Snake_Pos_y=10;
@@ -19,6 +19,7 @@ x_Speed=y_Speed=0;
 trail=[];
 tail = 1;
 Score= 0;
+var wall;
 name= "Unkown";
 function game() {
    
@@ -41,9 +42,9 @@ function game() {
  
     ctx.fillStyle="lime";
     for(var i=0;i<trail.length;i++) {
-        ctx.fillRect(trail[i].x*grid_size,trail[i].y*grid_size,grid_size-2,grid_size-2);
+        ctx.fillRect(trail[i].x*grid_size,trail[i].y*grid_size,grid_size,grid_size);
         if(trail[i].x==Snake_Pos_x && trail[i].y==Snake_Pos_y) {
-            tail = 1;
+            Reset();
         }
     }
     trail.push({x:Snake_Pos_x,y:Snake_Pos_y});
@@ -52,6 +53,7 @@ function game() {
     }
  
     if(foodX==Snake_Pos_x && foodY==Snake_Pos_y) {
+        tail+=1;
         Score += 1;
         foodX=Math.floor(Math.random()*tiles_count);
         foodY=Math.floor(Math.random()*tiles_count);
@@ -79,28 +81,28 @@ ctx.fillRect(100,150,100,5);
 function keyPush(evt) {
     switch(evt.keyCode) {
         case 37:
-            x_Speed=-0.5;y_Speed=0;
+            x_Speed=-1;y_Speed=0;
             break;
         case 38:
-            x_Speed=0;y_Speed=-0.5;
+            x_Speed=0;y_Speed=-1;
             break;
         case 39:
-            x_Speed=0.5;y_Speed=0;
+            x_Speed=1;y_Speed=0;
             break;
         case 40:
-            x_Speed=0;y_Speed=0.5;
+            x_Speed=0;y_Speed=1;
             break;
         case 65:
-            x_Speed=-0.5;y_Speed=0;
+            x_Speed=-1;y_Speed=0;
             break;
         case 87:
-            x_Speed=0;y_Speed=-0.5;
+            x_Speed=0;y_Speed=-1;
             break;
         case 68:
-            x_Speed=0.5;y_Speed=0;
+            x_Speed=1;y_Speed=0;
             break;
         case 83:
-            x_Speed=0;y_Speed=0.5;
+            x_Speed=0;y_Speed=1;
             break;
         
             
@@ -108,20 +110,39 @@ function keyPush(evt) {
     
 }
 
+function Reset(){
+
+    Snake_Pos_x=Snake_Pos_y=10;
+    grid_size=tiles_count=20;
+    foodX=foodY=15;
+    x_Speed=y_Speed=0;
+    trail=[];
+    tail = 1;
+    Score= 0;
+    clearInterval(Game);
+    Game = setInterval(game, 100);
+    document.getElementById("score").innerHTML = Score;
+}
+
+function GameOver(){
+    
+
+}
+
 function upmove() {
-    x_Speed=0;y_Speed=-0.5;
+    x_Speed=0;y_Speed=-1;
   }
   
   function downmove() {
-    x_Speed=0;y_Speed=0.5;
+    x_Speed=0;y_Speed=1;
   }
   
   function leftmove() {
-    x_Speed=-0.5;y_Speed=0;
+    x_Speed=-1;y_Speed=0;
   }
   
   function rightmove() {
-    x_Speed=0.5;y_Speed=0;
+    x_Speed=1;y_Speed=0;
   }
 
 function End() {
