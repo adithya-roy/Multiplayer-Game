@@ -63,19 +63,19 @@ function game() {
     ctx.fillStyle="red";
     ctx.fillRect(foodX*grid_size,foodY*grid_size,grid_size-2,grid_size-2);
 
-ctx.fillStyle = "red";
-ctx.fillRect(300,92,5,100);
-ctx.fillRect(200,55,5,100);
-ctx.fillRect(100,150,5,100);
-ctx.fillRect(400,0,5,100);
-ctx.fillRect(500,230,5,100);
-ctx.fillRect(600,100,5,100);
-ctx.fillRect(700,60,5,100);
-ctx.fillRect(200,340,5,50);
-ctx.fillRect(1,100,100,5);
-ctx.fillRect(355,200,100,5);
-ctx.fillRect(100,300,100,5);
-ctx.fillRect(100,150,100,5);
+// ctx.fillStyle = "red";
+// ctx.fillRect(300,92,5,100);
+// ctx.fillRect(200,55,5,100);
+// ctx.fillRect(100,150,5,100);
+// ctx.fillRect(400,0,5,100);
+// ctx.fillRect(500,230,5,100);
+// ctx.fillRect(600,100,5,100);
+// ctx.fillRect(700,60,5,100);
+// ctx.fillRect(200,340,5,50);
+// ctx.fillRect(1,100,100,5);
+// ctx.fillRect(355,200,100,5);
+// ctx.fillRect(100,300,100,5);
+// ctx.fillRect(100,150,100,5);
 
 }
 function keyPush(evt) {
