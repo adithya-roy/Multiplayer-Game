@@ -25,6 +25,7 @@ var x2=400;
 var y1=0;
 var y2=400;
 name= "Unkown";
+buttons=11;
 function game() {
    
     Snake_Pos_x+=x_Speed;
@@ -47,7 +48,7 @@ function game() {
     ctx.fillStyle="lime";
     for(var i=0;i<trail.length;i++) {
         ctx.fillRect(trail[i].x*grid_size,trail[i].y*grid_size,grid_size,grid_size);
-        if(trail[i].x==Snake_Pos_x && trail[i].y==Snake_Pos_y) {
+        if(trail[trail.length-1].x==Snake_Pos_x && trail[trail.length-1].y==Snake_Pos_y) {
             Reset();
         }
     }
@@ -65,6 +66,13 @@ function game() {
         Score += 10;
         document.getElementById("score").innerHTML = Score;
         alert("Level 2");
+        tail=1;
+    }
+
+    if(buttons==10){
+        buttons=0;
+        foodX=Math.floor(Math.random()*tiles_count);
+        foodY=Math.floor(Math.random()*tiles_count);
     }
 
     if(foodX==Snake_Pos_x && foodY==Snake_Pos_y) {
@@ -97,27 +105,35 @@ function keyPush(evt) {
     switch(evt.keyCode) {
         case 37:
             x_Speed=-1;y_Speed=0;
+            buttons+=1;
             break;
         case 38:
             x_Speed=0;y_Speed=-1;
+            buttons+=1;
             break;
         case 39:
             x_Speed=1;y_Speed=0;
+            buttons+=1;
             break;
         case 40:
             x_Speed=0;y_Speed=1;
+            buttons+=1;
             break;
         case 65:
             x_Speed=-1;y_Speed=0;
+            buttons+=1;
             break;
         case 87:
             x_Speed=0;y_Speed=-1;
+            buttons+=1;
             break;
         case 68:
             x_Speed=1;y_Speed=0;
+            buttons+=1;
             break;
         case 83:
             x_Speed=0;y_Speed=1;
+            buttons+=1;
             break;
         
             
