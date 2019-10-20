@@ -20,6 +20,10 @@ trail=[];
 tail = 1;
 Score= 0;
 var wall;
+var x1=0;
+var x2=400;
+var y1=0;
+var y2=400;
 name= "Unkown";
 function game() {
    
@@ -51,7 +55,18 @@ function game() {
     while(trail.length>tail) {
     trail.shift();
     }
- 
+    
+    if(Snake_Pos_y==x1 || Snake_Pos_y==x2 || Snake_Pos_x==y1 || Snake_Pos_x==y2){
+        Reset();
+        alert("Game Over !!");
+    }
+
+    if(Score==1){
+        Score += 10;
+        document.getElementById("score").innerHTML = Score;
+        alert("Level 2");
+    }
+
     if(foodX==Snake_Pos_x && foodY==Snake_Pos_y) {
         tail+=1;
         Score += 1;
@@ -63,8 +78,8 @@ function game() {
     ctx.fillStyle="red";
     ctx.fillRect(foodX*grid_size,foodY*grid_size,grid_size-2,grid_size-2);
 
-// ctx.fillStyle = "red";
-// ctx.fillRect(300,92,5,100);
+// ctx.fillStyle = "Blue";
+// ctx.fillRect(399,150,5,10);
 // ctx.fillRect(200,55,5,100);
 // ctx.fillRect(100,150,5,100);
 // ctx.fillRect(400,0,5,100);
@@ -111,7 +126,7 @@ function keyPush(evt) {
 }
 
 function Reset(){
-
+    
     Snake_Pos_x=Snake_Pos_y=10;
     grid_size=tiles_count=20;
     foodX=foodY=15;
