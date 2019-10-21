@@ -19,6 +19,7 @@ x_Speed=y_Speed=0;
 trail=[];
 tail = 1;
 Score= 0;
+Level =1;
 var wall;
 var x1=0;
 var x2=400;
@@ -63,10 +64,21 @@ function game() {
     }
 
     if(Score==1){
+        Level+=1;
         Score += 10;
         document.getElementById("score").innerHTML = Score;
         alert("Level 2");
         tail=1;
+        buttons=0;
+    }
+
+    if (Score==12){
+        Level+=1;
+        Score += 100;
+        document.getElementById("score").innerHTML = Score;
+        alert("Level 3");
+        tail=1;
+        buttons=0;
     }
 
     if(buttons==10){
@@ -77,6 +89,7 @@ function game() {
 
     if(foodX==Snake_Pos_x && foodY==Snake_Pos_y) {
         tail+=1;
+        Score();
         Score += 1;
         foodX=Math.floor(Math.random()*tiles_count);
         foodY=Math.floor(Math.random()*tiles_count);
@@ -141,6 +154,25 @@ function keyPush(evt) {
     
 }
 
+// function Score(){
+//     switch(Level){
+//         case 1:
+//             Score+=1;
+//             document.getElementById("score").innerHTML = Score;
+//             break
+//         case 2:
+//             Score+=10;
+//             document.getElementById("score").innerHTML = Score;
+//             break;
+//         case 3:
+//             Score+=100;
+//             document.getElementById("score").innerHTML = Score;
+//             break;
+        
+//     }
+
+// }
+
 function Reset(){
     
     Snake_Pos_x=Snake_Pos_y=10;
@@ -153,6 +185,7 @@ function Reset(){
     clearInterval(Game);
     Game = setInterval(game, 100);
     document.getElementById("score").innerHTML = Score;
+    Level=1;
 }
 
 function GameOver(){
