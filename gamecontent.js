@@ -89,7 +89,7 @@ function game() {
 
     if(foodX==Snake_Pos_x && foodY==Snake_Pos_y) {
         tail+=1;
-        Score();
+        // Score();
         Score += 1;
         foodX=Math.floor(Math.random()*tiles_count);
         foodY=Math.floor(Math.random()*tiles_count);
