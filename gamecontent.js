@@ -15,6 +15,8 @@ window.onload=function() {
 Snake_Pos_x=Snake_Pos_y=10;
 grid_size=tiles_count=20;
 foodX=foodY=15;
+wall1=wall2=10;
+wall4=11;
 x_Speed=y_Speed=0;
 trail=[];
 tail = 1;
@@ -63,22 +65,39 @@ function game() {
         alert("Game Over !!");
     }
 
-    if(Score==1){
-        Level+=1;
-        Score += 10;
-        document.getElementById("score").innerHTML = Score;
-        alert("Level 2");
-        tail=1;
-        buttons=0;
+    // if(Score==1){
+    //     Level+=1;
+    //     Score += 10;
+    //     document.getElementById("score").innerHTML = Score;
+    //     alert("Level 2");
+    //     tail=1;
+    //     buttons=0;
+    // }
+
+    // if (Score==12){
+    //     Level+=1;
+    //     Score += 100;
+    //     document.getEl6uementById("score").innerHTML = Score;
+    //     alert("Level 3");
+    //     tail=1;
+    //     buttons=0;
+    // }
+
+    if (Score > 0){
+        ctx.fillStyle = "Blue";
+        ctx.fillRect(wall1*grid_size,wall2*grid_size,grid_size,grid_size);
+        ctx.fillRect((wall1+1)*grid_size,wall2*grid_size,grid_size,grid_size);
+        if(Snake_Pos_x==wall1 && Snake_Pos_y==wall2){
+                console.log("done")  ;  
+                Reset();
+                alert("Game Over !!");
+        }
+        if(Snake_Pos_x==(wall1+1) && Snake_Pos_y==(wall2)){
+            console.log("done")  ;  
+            Reset();
+            alert("Game Over !!");
     }
 
-    if (Score==12){
-        Level+=1;
-        Score += 100;
-        document.getElementById("score").innerHTML = Score;
-        alert("Level 3");
-        tail=1;
-        buttons=0;
     }
 
     if(buttons==10){
