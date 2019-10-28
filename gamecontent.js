@@ -65,25 +65,25 @@ function game() {
         alert("Game Over !!");
     }
 
-    // if(Score==1){
-    //     Level+=1;
-    //     Score += 10;
-    //     document.getElementById("score").innerHTML = Score;
-    //     alert("Level 2");
-    //     tail=1;
-    //     buttons=0;
-    // }
+    if(Score==10){
+        Level+=1;
+        Score += 10;
+        document.getElementById("score").innerHTML = Score;
+        alert("Level 2");
+        tail=1;
+        buttons=0;
+    }
 
-    // if (Score==12){
-    //     Level+=1;
-    //     Score += 100;
-    //     document.getEl6uementById("score").innerHTML = Score;
-    //     alert("Level 3");
-    //     tail=1;
-    //     buttons=0;
-    // }
+    if (Score==30){
+        Level+=1;
+        Score += 100;
+        document.getEl6uementById("score").innerHTML = Score;
+        alert("Level 3");
+        tail=1;
+        buttons=0;
+    }
 
-    if (Score > 0){
+    if (Score > 30){
         ctx.fillStyle = "Blue";
         ctx.fillRect(wall1*grid_size,wall2*grid_size,grid_size,grid_size);
         ctx.fillRect((wall1+1)*grid_size,wall2*grid_size,grid_size,grid_size);
