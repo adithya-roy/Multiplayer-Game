@@ -9,6 +9,75 @@
     </head>
     <body onload="startMovement()">
         <script src="gamecontent.js"></script>
+        <script src="nodecwweb.js"></script>
+        <div class="content">
+            <div class="main">
+
+                <noscript>"
+                    <h2>Enable Javascript!</h2>
+                    <p>This HTML 5 app requires Javascript to run. Please check that Javascript is enabled in your browser.</p>"
+                </noscript>
+
+                <div id="canvas-main">
+                    <div id="canvas-overlfoodY-main">
+                        <div id="canvas-overlfoodY-container">
+                            <div id="gamename"></div>
+                            <div id="start"></div>
+                        </div>
+                    </div>
+                </div>
+                <canvas id="MainCanvas" width="400" height="400"  style="border:10px solid red;  margin-left:400px; margin-top: 100px;">
+                <p>Canvas not supported</p>
+                </canvas>
+            </div>
+
+            <div>
+                <h3>SCORE</h3>
+                <p id="playername"></p>
+                <p id="score"></p>
+            </div>
+            
+            <div class="controls">
+                <h3>CONTROLS</h3>
+                <p>Move the snake using up,down,left or right </p>
+                <div>
+                    <button id="up" class="controlButton">&uarr;</button> <br></br>
+                    <button id="left" class="controlButton">&larr;</button>
+                    <button id="right" class="controlButton">&rarr;</button> <br></br>               
+                    <button id="down" class="controlButton">&darr;</button>
+                </div>
+
+            </div>
+
+            <!-- <div class="content" id="highscore">
+                <div class="button" id="back">
+                    back
+                </div>
+                <div>
+                    <h1>Highscore</h1>
+                    <p></p>
+                    <ol id="highscore-list">
+                    </ol>
+                    <p></p>
+                    
+                </div> -->
+
+        </div>
+        <!-- <script src="cww2.js"></script> -->
+        
+    </body>
+
+</html><html lang="en">
+    <head>
+        
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Snakes</title>
+
+    </head>
+    <body onload="startMovement()">
+        <script src="gamecontent.js"></script>
         <div class="content">
             <div class="main">
 
