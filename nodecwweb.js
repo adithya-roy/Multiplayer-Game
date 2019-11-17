@@ -1,16 +1,8 @@
-var mysql = require('mysql');
+<?php
+$server= "localhost";
+$username = "root";
+$password = "root";
 
-var con = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "root"
-});
-
-con.connect(function(err) {
-  if (err) throw err;
-  console.log("Connection Made!");
-  con.query("CREATE DATABASE gamedb", function (err, result) {
-    if (err) throw err;
-    console.log("Database created!!");
-  });
-});
+// Creating connection
+$db = new mysqli($server, $username, $password) or die("couldnt connect!");
+?>
