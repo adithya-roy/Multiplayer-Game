@@ -45,9 +45,13 @@ function game() {
     if(Snake_Pos_y>tiles_count-1) {
         Snake_Pos_y= 0;
     }
-    ctx.fillStyle="black";
+    ctx.fillStyle="Black";
     ctx.fillRect(0,0,canv.width,canv.height);
- 
+
+    var background = new Image();
+    background.src= "https://images.unsplash.com/photo-1508138221679-760a23a2285b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80";
+    ctx.drawImage(background,0,0);
+
     ctx.fillStyle="lime";
     for(var i=0;i<trail.length;i++) {
         ctx.fillRect(trail[i].x*grid_size,trail[i].y*grid_size,grid_size,grid_size);
@@ -84,7 +88,7 @@ function game() {
     }
 
     if (Score > 30){
-        ctx.fillStyle = "Blue";
+        ctx.fillStyle = "Red";
         ctx.fillRect(wall1*grid_size,wall2*grid_size,grid_size,grid_size);
         ctx.fillRect((wall1+1)*grid_size,wall2*grid_size,grid_size,grid_size);
         if(Snake_Pos_x==wall1 && Snake_Pos_y==wall2){
@@ -115,7 +119,7 @@ function game() {
         document.getElementById("score").innerHTML = Score;
 
     }
-    ctx.fillStyle="red";
+    ctx.fillStyle="Pink";
     ctx.fillRect(foodX*grid_size,foodY*grid_size,grid_size-2,grid_size-2);
 
 // ctx.fillStyle = "Blue";
