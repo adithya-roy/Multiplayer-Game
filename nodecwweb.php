@@ -1,7 +1,7 @@
 <?php
 $server= "localhost";
 $username = "root";
-$password = "root";
+$password = "";
 $db = "userhighscore";
 // Creating connection
 $conn = new mysqli($server, $username, $password);
@@ -27,3 +27,4 @@ if ($conn->query($sql) === TRUE) {
 
 ?>
 
+ 
