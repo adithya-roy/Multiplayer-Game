@@ -52,7 +52,7 @@ function game() {
     background.src= "https://img.pixers.pics/pho_wat(s3:700/FO/42/13/01/05/700_FO42130105_ad9f93b3421a79280b0b26d6a5e2e3f2.jpg,700,465,cms:2018/10/5bd1b6b8d04b8_220x50-watermark.png,over,480,415,jpg)/wall-murals-green-grass-background-texture.jpg.jpg";
     ctx.drawImage(background,0,0);
 
-    ctx.fillStyle="lime";
+    ctx.fillStyle="Black";
     for(var i=0;i<trail.length;i++) {
         ctx.fillRect(trail[i].x*grid_size,trail[i].y*grid_size,grid_size,grid_size);
         if(trail[trail.length-1].x==Snake_Pos_x && trail[trail.length-1].y==Snake_Pos_y) {
@@ -119,7 +119,7 @@ function game() {
         document.getElementById("score").innerHTML = Score;
 
     }
-    ctx.fillStyle="Pink";
+    ctx.fillStyle="White";
     ctx.fillRect(foodX*grid_size,foodY*grid_size,grid_size-2,grid_size-2);
 
 // ctx.fillStyle = "Blue";
