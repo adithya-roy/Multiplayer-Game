@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Snake Game</title>
+    </head>
+<body >
+    <header style="background:rgba(68, 182, 228, 0.2);">
+        <img src= "Snake.png" alt="Snake Game" height="150" width="150" style="display: inline-block" >
+        <nav style="display: inline-block; float:right; margin-top: 50px;">
+            <ul>
+                <li style="float:right"><a class="active" href="highscore.html" style="text-decoration:none; font-weight:bold; color:white;">HighScore</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="content">
+            <div class="main">
+
+                <noscript>"
+                    <h2>Enable Javascript!</h2>
+                    <p>This HTML 5 app requires Javascript to run. Please check that Javascript is enabled in your browser.</p>"
+                </noscript>
+                
+                <div id="canvas-main">
+                    <div style="overflow: hidden;">
+                        <p style="float: left; margin-left:400px; margin-top: 30px; text-shadow: 3px 2px black; font-weight: 900; color:Red; font-size: 30px;">Score:</p>
+                    </div>
+                    <div id="canvas-overlfoodY-main">
+                        <div id="canvas-overlfoodY-container">
+                            <div id="gamename"></div>
+                            <div id="start"></div>
+                        </div>
+                    </div>
+                </div>
+                <canvas id="MainCanvas" width="400" height="400"  style="border:2px solid red;  margin-left:400px; margin-top: 10px;">
+                <p>Canvas not supported</p>
+                </canvas>
+                <br><button id="up" class="controlButton"><img src= "up.png" alt="Snake Game" height="75" width="75" style="margin-left:625px;" ></button>
+            </div>
+                <button id="left" class="controlButton"><img src= "left.png" alt="Snake Game" height="75" width="75" style="display: inline-block; margin-left:500px" ></button>
+                <button id="down" class="controlButton"><img src= "down.png" alt="Snake Game" height="75" width="75" style="display: inline-block; margin-left:565px;" ></button>
+                <button id="right" class="controlButton"><img src= "right.png" alt="Snake Game" height="75" width="75" style="display: inline-block; margin-left:630px;" ></button>
+                
+            </div>
+        </div>
+</body>
+</html>

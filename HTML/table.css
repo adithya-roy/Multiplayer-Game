@@ -1,0 +1,55 @@
+html, body {
+	width:100%;
+	font-family: 'Quando', serif;
+	font-size: 14px;
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    height: 100%;
+	line-height: 23px;
+	background: url('back.jpg') repeat;
+    }
+table {
+    width:30%;
+    margin-left:500px; margin-top: 100px;
+    font-size:150%
+  }
+  table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    
+  }
+  th, td {
+    padding: 15px;
+    text-align: left;
+  }
+  table#t01 tr:nth-child(even) {
+    background-color: lightseagreen;
+    opacity: 0.3;
+  }
+  table#t01 tr:nth-child(odd) {
+   background-color: #fff;
+  }
+  table#t01 th {
+    background-color: black;
+    color: white;
+  }
+
+  .active {
+    background-color: rgba(0, 0, 0, 0.623)
+  }
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-size:150%
+  }
+
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
