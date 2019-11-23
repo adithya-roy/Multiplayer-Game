@@ -103,4 +103,10 @@ body {
       background: transparent;
       border: none;
       width: 10%;
+      border: none;
+      border-radius: 50%;
+  }
+
+  table {
+    margin-left:500px;
   }
